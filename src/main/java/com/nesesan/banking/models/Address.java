@@ -1,21 +1,19 @@
 package com.nesesan.banking.models;
 
+import com.nesesan.banking.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Data
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class Address extends AbstractEntity {
 
     private String street;
 

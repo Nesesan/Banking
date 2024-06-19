@@ -1,21 +1,18 @@
 package com.nesesan.banking.models;
 
+import com.nesesan.banking.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 @Data
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Role {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class Role extends AbstractEntity {
 
     private String name;
 

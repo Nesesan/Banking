@@ -1,25 +1,22 @@
 package com.nesesan.banking.models;
 
+import com.nesesan.banking.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 
 
 @Data
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "_user")
-public class User {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class User extends AbstractEntity {
 
     private String firstName;
 

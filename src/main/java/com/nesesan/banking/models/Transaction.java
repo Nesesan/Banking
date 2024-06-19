@@ -1,25 +1,22 @@
 package com.nesesan.banking.models;
 
+import com.nesesan.banking.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+
 
 @Data
-@Builder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "transaction")
-public class Transaction {
-
-    @Id
-    @GeneratedValue
-    private int id;
+public class Transaction extends AbstractEntity {
 
     private BigDecimal amount;
 
@@ -27,10 +24,6 @@ public class Transaction {
     private TransactionType type;
 
     private String destinationIban;
-
-    private LocalDateTime creationDate;
-
-    private LocalDateTime lastUpdated;
 
     @ManyToOne
     @JoinColumn(name ="user_id" )
