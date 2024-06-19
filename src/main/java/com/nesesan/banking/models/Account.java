@@ -15,7 +15,7 @@ import lombok.experimental.SuperBuilder;
 @Entity
 public class Account extends AbstractEntity {
 
-    private String Iban;
+    private String iban;
 
     @OneToOne
     @JoinColumn(name = "user_id")
