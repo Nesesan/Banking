@@ -3,6 +3,9 @@ package com.nesesan.banking.dto;
 import com.nesesan.banking.models.Transaction;
 import com.nesesan.banking.models.TransactionType;
 import com.nesesan.banking.models.User;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.Positive;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -18,6 +21,9 @@ public class TransactionDto {
 
     private int id;
 
+    @Positive
+    @Max(value = 1000000)
+    @Min(value = 10)
     private BigDecimal amount;
 
     private TransactionType type;
