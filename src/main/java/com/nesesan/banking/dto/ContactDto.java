@@ -25,7 +25,7 @@ public class ContactDto {
 
     private int userId;
 
-    public static ContactDto fromContact(Contact contact) {
+    public static ContactDto fromEntity(Contact contact) {
         return ContactDto.builder()
                 .id(contact.getId())
                 .firstName(contact.getFirstName())
@@ -36,7 +36,7 @@ public class ContactDto {
                 .build();
     }
 
-    public static Contact toContact(ContactDto contact) {
+    public static Contact toEntity(ContactDto contact) {
         return Contact.builder()
                 .id(contact.getId())
                 .firstName(contact.getFirstName())

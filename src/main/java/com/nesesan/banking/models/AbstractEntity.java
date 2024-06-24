@@ -1,4 +1,4 @@
-package com.nesesan.banking;
+package com.nesesan.banking.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

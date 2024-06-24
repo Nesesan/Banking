@@ -13,7 +13,7 @@ import lombok.Setter;
 @Builder
 public class AccountDto {
 
-    private int id;
+    private Integer id;
 
     private String iban;
 
@@ -27,7 +27,7 @@ public class AccountDto {
                 .build();
     }
 
-    public static Account fromEntity(AccountDto account) {
+    public static Account toEntity(AccountDto account) {
         return Account.builder()
                 .id(account.getId())
                 .iban(account.getIban())
