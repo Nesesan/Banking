@@ -1,18 +1,19 @@
 package com.nesesan.banking.models;
 
-import com.nesesan.banking.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Contact extends AbstractEntity {
+public class Contact extends AbstractEntity{
 
     private String firstName;
 
